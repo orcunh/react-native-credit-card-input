@@ -215,16 +215,6 @@ const POSTAL_CODE_INPUT_WIDTH = 120; // https://github.com/yannickcr/eslint-plug
           style={[s.form, formStyle]}
           {...scrollViewProps}
         >
-          {requiresName && (
-            <CCInput
-              {...this._inputProps("name")}
-              containerStyle={[
-                s.inputContainer,
-                inputContainerStyle,
-                { width: NAME_INPUT_WIDTH },
-              ]}
-            />
-          )}
           <CCInput
             {...this._inputProps("number")}
             keyboardType="numeric"
@@ -257,6 +247,16 @@ const POSTAL_CODE_INPUT_WIDTH = 120; // https://github.com/yannickcr/eslint-plug
                 s.inputContainer,
                 inputContainerStyle,
                 { width: POSTAL_CODE_INPUT_WIDTH },
+              ]}
+            />
+          )}
+          {requiresName && (
+            <CCInput
+              {...this._inputProps("name")}
+              containerStyle={[
+                s.inputContainer,
+                inputContainerStyle,
+                { width: NAME_INPUT_WIDTH },
               ]}
             />
           )}
